@@ -11,7 +11,22 @@
     {% endif %}
 </head>
 <body>
-    <div>Microblog: <a href="/index">Home</a></div>
+    <div>
+        Microblog:
+        <a href="{{url_for('index')}}}">Home</a>
+        <a href="{{url_for('login')}}">Login</a>
+
+        <!-- Adding flash messages to our template -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
     <hr>
     <!--  Jinja2 templating engine we inherit the entier page from outside this file except this block below in this block we can create a custom design or code or even html page  -->
     {% block content %}{% endblock %}
