@@ -2,8 +2,8 @@
 
 In this tutorial we'll learn the following topics using flask framework:
 
-01- Templates
-02- Web Forms
+01- Templates Done
+02- Web Forms In progress
 03- Database
 05- User Logins
 06- Profile Page
