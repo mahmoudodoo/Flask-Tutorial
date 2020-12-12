@@ -1,8 +1,9 @@
 <!-- here we extended the base.html file and we created a custom code -->
 {% extends "base.html" %}
+
 {% block content %}
-    <h1>Hi, {{ user.nickname }}!</h1>
+    <h1>Hi, {{ current_user.username }}!</h1>
     {% for post in posts %}
-    <div><p>{{ post.author.nickname }} says: <b>{{ post.body }}</b></p></div>
+    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
     {% endfor %}
 {% endblock %}
