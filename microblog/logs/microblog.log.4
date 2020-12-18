@@ -1,4 +1,5 @@
-2020-12-16 20:33:38,213 ERROR: Exception on /edit_profile [POST] [in /home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py:1891]
+2020-12-16 20:15:14,547 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:45]
+2020-12-16 20:15:45,958 ERROR: Exception on /edit_profile [POST] [in /home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1277, in _execute_context
     self.dialect.do_execute(
@@ -69,36 +70,5 @@ Traceback (most recent call last):
     cursor.execute(statement, parameters)
 sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
 [SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
-[parameters: ('mahmoudodeh', 'sasdasda', 3)]
+[parameters: ('mahmoudodeh', 'asdsdasdasda', 3)]
 (Background on this error at: http://sqlalche.me/e/13/gkpj)
-2020-12-16 20:40:28,924 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:45]
-2020-12-16 20:43:25,781 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:45]
-2020-12-16 20:47:18,230 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:45]
-2020-12-16 20:52:08,822 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:45]
-2020-12-17 08:13:52,048 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:45]
-2020-12-17 12:23:04,353 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:48]
-2020-12-17 12:23:14,660 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:48]
-2020-12-18 06:35:49,851 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:48]
-2020-12-18 07:41:40,397 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:48]
-2020-12-18 08:24:38,557 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:48]
-2020-12-18 08:24:54,033 ERROR: Exception on /user/mahmoudodeh [GET] [in /home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/routes.py", line 86, in user
-    form = EmptyForm()
-NameError: name 'EmptyForm' is not defined
-2020-12-18 08:26:17,468 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:48]
-2020-12-18 11:37:37,609 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:48]
