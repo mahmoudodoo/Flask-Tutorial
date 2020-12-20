@@ -1,4 +1,4 @@
-2020-12-18 11:37:44,714 ERROR: Exception on /index [GET] [in /home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py:1891]
+2020-12-20 08:47:30,122 ERROR: Exception on /login [GET] [in /home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,12 +12,28 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/routes.py", line 30, in index
-    form = PostForm()
-NameError: name 'PostForm' is not defined
-2020-12-18 11:37:48,313 ERROR: Exception on /index [GET] [in /home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/routes.py", line 69, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/templates/login.html", line 20, in template
+    {% block app_content %}
+jinja2.exceptions.TemplateAssertionError: block 'app_content' defined twice
+2020-12-20 08:47:30,337 ERROR: Exception on /login [GET] [in /home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -31,12 +47,28 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/routes.py", line 30, in index
-    form = PostForm()
-NameError: name 'PostForm' is not defined
-2020-12-18 11:37:58,579 ERROR: Exception on /index [GET] [in /home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/routes.py", line 69, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/templates/login.html", line 20, in template
+    {% block app_content %}
+jinja2.exceptions.TemplateAssertionError: block 'app_content' defined twice
+2020-12-20 08:47:30,514 ERROR: Exception on /login [GET] [in /home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -50,69 +82,24 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/routes.py", line 30, in index
-    form = PostForm()
-NameError: name 'PostForm' is not defined
-2020-12-18 11:41:24,550 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:48]
-2020-12-18 11:41:34,525 ERROR: Exception on /index [GET] [in /home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/routes.py", line 32, in index
-    form = PostForm()
-NameError: name 'PostForm' is not defined
-2020-12-18 11:41:36,933 ERROR: Exception on /index [GET] [in /home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/routes.py", line 32, in index
-    form = PostForm()
-NameError: name 'PostForm' is not defined
-2020-12-18 11:46:23,240 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:48]
-2020-12-18 11:46:31,824 ERROR: Exception on /index [GET] [in /home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/routes.py", line 32, in index
-    form = PostForm()
-NameError: name 'PostForm' is not defined
-2020-12-18 11:48:11,798 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:48]
-2020-12-18 11:51:32,833 INFO: Microblog startup [in /home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/__init__.py:48]
+  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/routes.py", line 69, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/mahmoudodeh/Desktop/Flask/flask-venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/mahmoudodeh/Desktop/Flask/Flask-Tutorial/microblog/app/templates/login.html", line 20, in template
+    {% block app_content %}
+jinja2.exceptions.TemplateAssertionError: block 'app_content' defined twice
